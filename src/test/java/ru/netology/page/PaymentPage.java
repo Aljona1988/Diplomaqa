@@ -3,7 +3,7 @@ package ru.netology.page;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataHelper;
-
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.withText;
@@ -15,7 +15,7 @@ public class PaymentPage {
     private SelenideElement fieldNumber = $("[placeholder='0000 0000 0000 0000']");
     private SelenideElement fieldMonth = $("[placeholder='08']");
     private SelenideElement fieldYear = $("[placeholder='22']");
-    private SelenideElement fieldOwner = $("fieldset > div:nth-child(3) > span > span:nth-child(1) > span > span > span.input__box > input");
+    private SelenideElement fieldOwner = $(byText("Владелец")).parent().$(".input__control");;
     private SelenideElement fieldCVC = $("[placeholder='999']");
     private SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
 
@@ -27,7 +27,7 @@ public class PaymentPage {
     private SelenideElement fieldOwnerError = $("div:nth-child(3) > span > span:nth-child(1) > span > span > span.input__sub");
     private SelenideElement fieldCvcError = $("div:nth-child(3) > span > span:nth-child(2) > span > span > span.input__sub");
 
-    public void enterCardInfo(DataHelper.CardInfo cardInfo) {
+    public void cardInfo(DataHelper.CardInfo cardInfo) {
         fieldNumber.setValue(cardInfo.getCardNumber());
         fieldMonth.setValue(cardInfo.getMonth());
         fieldYear.setValue(cardInfo.getYear());
