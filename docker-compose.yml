@@ -29,6 +29,6 @@ services:
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=app
-      - POSTGRES_PASSWORD=qwerty12345
+      - POSTGRES_PASSWORD=pass
     ports:
-      - '5433:5432'
+      - '5432:5432'

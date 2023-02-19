@@ -3,9 +3,9 @@ package ru.netology.page;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataHelper;
+
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -19,8 +19,8 @@ public class PaymentPage {
     private SelenideElement fieldCVC = $("[placeholder='999']");
     private SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
 
-    private SelenideElement successNotification = $(withText("Успешно"));
-    private SelenideElement errorNotification = $(withText("Ошибка"));
+    private SelenideElement okNotification = $(withText("Успешно"));
+    private SelenideElement nokNotification = $(withText("Ошибка"));
     private SelenideElement fieldNumberError = $("fieldset > div:nth-child(1) > span > span > span.input__sub");
     private SelenideElement fieldMonthError = $("div:nth-child(2) > span > span:nth-child(1) > span > span > span.input__sub");
     private SelenideElement fieldYearError = $("div:nth-child(2) > span > span:nth-child(2) > span > span > span.input__sub");
@@ -36,24 +36,31 @@ public class PaymentPage {
         continueButton.click();
     }
 
-    public void successNotification() {
-        successNotification.shouldBe(Condition.visible);
+    public void okNotification() {
+        okNotification.waitUntil(visible, 15000);
     }
 
-    public void errorNotification() {
-        errorNotification.shouldBe(Condition.visible);
+    public void nokNotification() {nokNotification.waitUntil(visible, 20000);
     }
 
     public void messInvalidCardNumber() {
+        nokNotification.waitUntil(visible, 20000);
+    }
+
+    public void messErrorNum() {
+        fieldNumberError.shouldHave(text("Неверный формат"));
+    }
+    public void messZeroNum() {
         fieldNumberError.shouldHave(text("Неверный формат"));
     }
 
     public void messInvalidMonth() {
-        fieldMonthError.shouldHave(text("Неверный формат"));
+        fieldMonthError.shouldHave(text("Неверно указан срок действия карты"));
     }
 
+
     public void messInvalidYear() {
-        fieldYearError.shouldHave(text("Неверный формат"));
+        fieldYearError.shouldHave(text("Истёк срок действия карты"));
     }
 
     public void messInvalidOwner() {
@@ -65,15 +72,15 @@ public class PaymentPage {
     }
 
     public void messEmptyCardNumberField() {
-        fieldNumberError.shouldHave(text("Неверный формат"));
+        fieldNumberError.shouldHave(text("Поле обязательно для заполнения"));
     }
 
     public void messEmptyMonthField() {
-        fieldMonthError.shouldHave(text("Неверный формат"));
+        fieldMonthError.shouldHave(text("Поле обязательно для заполнения"));
     }
 
     public void messEmptyYearField() {
-        fieldYearError.shouldHave(text("Неверный формат"));
+        fieldYearError.shouldHave(text("Поле обязательно для заполнения"));
     }
 
     public void messEmptyOwnerField() {
@@ -81,10 +88,11 @@ public class PaymentPage {
     }
 
     public void messEmptyCvcField() {
-        fieldCvcError.shouldHave(text("Неверный формат"));
+        fieldCvcError.shouldHave(text("Поле обязательно для заполнения"));
     }
 
-    public void messExpiredYearField() {fieldYearError.shouldHave(text("Истёк срок действия карты"));
+    public void messExpiredYearField() {
+        fieldYearError.shouldHave(text("Истёк срок действия карты"));
     }
 
     public void messExpiredMonth() {
