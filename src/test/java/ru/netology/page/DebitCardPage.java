@@ -1,6 +1,5 @@
 package ru.netology.page;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataHelper;
 
@@ -10,8 +9,9 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class PaymentPage {
+public class DebitCardPage {
 
+    private final SelenideElement payByCard = $$("h3").find(text("Оплата по карте"));
     private SelenideElement fieldNumber = $("[placeholder='0000 0000 0000 0000']");
     private SelenideElement fieldMonth = $("[placeholder='08']");
     private SelenideElement fieldYear = $("[placeholder='22']");
@@ -27,6 +27,9 @@ public class PaymentPage {
     private SelenideElement fieldOwnerError = $("div:nth-child(3) > span > span:nth-child(1) > span > span > span.input__sub");
     private SelenideElement fieldCvcError = $("div:nth-child(3) > span > span:nth-child(2) > span > span > span.input__sub");
 
+    public DebitCardPage() {
+        payByCard.shouldBe(visible);
+    }
     public void cardInfo(DataHelper.CardInfo cardInfo) {
         fieldNumber.setValue(cardInfo.getCardNumber());
         fieldMonth.setValue(cardInfo.getMonth());
