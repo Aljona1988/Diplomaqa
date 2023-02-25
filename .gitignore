@@ -36,4 +36,4 @@ Thumbs.db*
 node_modules
 .gradle
 .allure/
-
+.allure/allure-2.13.0/
