@@ -2,6 +2,8 @@ package ru.netology.data;
 
 import lombok.Value;
 
+import static com.codeborne.selenide.Condition.visible;
+
 public class DataHelper {
     static DataGenerator dataGenerator = new DataGenerator();
 
@@ -67,23 +69,23 @@ public class DataHelper {
     }
 
     public static CardInfo getEmptyCardNumber() {
-        return new CardInfo(" ", "24", "09", "Ivanov", "123");
+        return new CardInfo(" ", dataGenerator.getCurrentYear().getYear(), dataGenerator.getValidMonth().getMonth(), DataGenerator.getValidOwner(), DataGenerator.getValidCvc());
     }
 
     public static CardInfo getEmptyMonth() {
-        return new CardInfo("4444 4444 4444 4441", "24", " ", "Ivanov", "123");
+        return new CardInfo(dataGenerator.getApprovedCardNumber(), dataGenerator.getCurrentYear().getYear(), "", DataGenerator.getValidOwner(), DataGenerator.getValidCvc());
     }
 
     public static CardInfo getEmptyYear() {
-        return new CardInfo("4444 4444 4444 4441", " ", " ", "Ivanov", "123");
+        return new CardInfo(dataGenerator.getApprovedCardNumber(), "", dataGenerator.getValidMonth().getMonth(), DataGenerator.getValidOwner(), DataGenerator.getValidCvc());
     }
 
     public static CardInfo getEmptyOwner() {
-        return new CardInfo("4444 4444 4444 4441", " ", " ", " ", "123");
+        return new CardInfo(dataGenerator.getApprovedCardNumber(), dataGenerator.getCurrentYear().getYear(), dataGenerator.getValidMonth().getMonth(), "", DataGenerator.getValidCvc());
     }
 
     public static CardInfo getEmptyCvc() {
-        return new CardInfo("4444 4444 4444 4441", " ", " ", " ", " ");
+        return new CardInfo(dataGenerator.getApprovedCardNumber(), dataGenerator.getCurrentYear().getYear(), dataGenerator.getValidMonth().getMonth(), DataGenerator.getValidOwner(), "");
     }
 
     public static CardInfo getInvalidOwnerCard() {

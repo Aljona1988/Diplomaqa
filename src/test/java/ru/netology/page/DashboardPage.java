@@ -10,7 +10,6 @@ public class DashboardPage {
     private final SelenideElement payButton = $$("button").find(exactText("Купить"));
     private final SelenideElement creditButton = $$("button").find(exactText("Купить в кредит"));
 
-    //private final SelenideElement payByCredit = $$("h3").find(text("Кредит по данным карты"));
 
     public DebitCardPage payByDebitCard() {
         payButton.click();

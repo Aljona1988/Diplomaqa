@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">10</div>
+<div class="counter">9</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2m9.78s</div>
+<div class="counter">2m10.25s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">47%</div>
+<div class="percent">52%</div>
 <p>successful</p>
 </div>
 </td>
@@ -76,10 +76,10 @@
 <a name="shouldErrorEmptyCardNum()"></a>
 <h3 class="failures">Оплата по дебитовой карте с пустым полем Номер карты</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {fieldset &gt; div:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {By.xpath: //span[text()='Номер карты']/following-sibling::span[@class='input__sub']}
 Element: '&lt;span class=&quot;input__sub&quot;&gt;Неверный формат&lt;/span&gt;'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836730674.14.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836730674.14.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348160367.5.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348160367.5.html
 Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
 	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
@@ -88,8 +88,8 @@ Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messEmptyCardNumberField(PaymentPage.java:75)
-	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyCardNum(DebitCardTest.java:143)
+	at app//ru.netology.page.DebitCardPage.messEmptyCardNumberField(DebitCardPage.java:78)
+	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyCardNum(DebitCardTest.java:141)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -178,10 +178,10 @@ Timeout: 4 s.
 <a name="shouldErrorEmptyCvc()"></a>
 <h3 class="failures">Оплата по дебитовой карте с пустым полем Cvc</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {div:nth-child(3) &gt; span &gt; span:nth-child(2) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {By.xpath: //span[text()='CVC/CVV']/following-sibling::span[@class='input__sub']}
 Element: '&lt;span class=&quot;input__sub&quot;&gt;Неверный формат&lt;/span&gt;'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836668990.10.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836668990.10.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348103376.1.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348103376.1.html
 Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
 	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
@@ -190,8 +190,8 @@ Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messEmptyCvcField(PaymentPage.java:91)
-	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyCvc(DebitCardTest.java:176)
+	at app//ru.netology.page.DebitCardPage.messEmptyCvcField(DebitCardPage.java:94)
+	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyCvc(DebitCardTest.java:174)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -280,10 +280,10 @@ Timeout: 4 s.
 <a name="shouldErrorEmptyMonth()"></a>
 <h3 class="failures">Оплата по дебитовой карте с пустым полем Месяц</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {div:nth-child(2) &gt; span &gt; span:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {By.xpath: //span[text()='Месяц']/following-sibling::span[@class='input__sub']}
 Element: '&lt;span class=&quot;input__sub&quot;&gt;Неверный формат&lt;/span&gt;'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836676454.11.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836676454.11.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348110114.2.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348110114.2.html
 Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
 	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
@@ -292,8 +292,8 @@ Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messEmptyMonthField(PaymentPage.java:79)
-	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyMonth(DebitCardTest.java:152)
+	at app//ru.netology.page.DebitCardPage.messEmptyMonthField(DebitCardPage.java:82)
+	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyMonth(DebitCardTest.java:150)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -382,10 +382,10 @@ Timeout: 4 s.
 <a name="shouldErrorEmptyYear()"></a>
 <h3 class="failures">Оплата по дебитовой карте с пустым полем Год</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {div:nth-child(2) &gt; span &gt; span:nth-child(2) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {By.xpath: //span[text()='Год']/following-sibling::span[@class='input__sub']}
 Element: '&lt;span class=&quot;input__sub&quot;&gt;Неверный формат&lt;/span&gt;'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836694832.13.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836694832.13.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348126928.4.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348126928.4.html
 Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
 	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
@@ -394,8 +394,8 @@ Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messEmptyYearField(PaymentPage.java:83)
-	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyYear(DebitCardTest.java:160)
+	at app//ru.netology.page.DebitCardPage.messEmptyYearField(DebitCardPage.java:86)
+	at app//ru.netology.test.DebitCardTest.shouldErrorEmptyYear(DebitCardTest.java:158)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -484,12 +484,12 @@ Timeout: 4 s.
 <a name="shouldErrorInvalidOwner()"></a>
 <h3 class="failures">Оплата по дебитовой карте с указанием невалидных значений в поле Владелец</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementNotFound: Element not found {div:nth-child(3) &gt; span &gt; span:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementNotFound: Element not found {By.xpath: //span[text()='Владелец']/following-sibling::span[@class='input__sub']}
 Expected: text 'Неверный формат'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836749128.16.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836749128.16.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348176002.7.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348176002.7.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div:nth-child(3) &gt; span &gt; span:nth-child(1) &gt; span &gt; span &gt; span.input__sub&quot;}
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='Владелец']/following-sibling::span[@class='input__sub']&quot;}
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:37)
 	at app//com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:100)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:65)
@@ -499,8 +499,8 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messInvalidOwner(PaymentPage.java:67)
-	at app//ru.netology.test.DebitCardTest.shouldErrorInvalidOwner(DebitCardTest.java:112)
+	at app//ru.netology.page.DebitCardPage.messInvalidOwner(DebitCardPage.java:70)
+	at app//ru.netology.test.DebitCardTest.shouldErrorInvalidOwner(DebitCardTest.java:110)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -582,15 +582,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div:nth-child(3) &gt; span &gt; span:nth-child(1) &gt; span &gt; span &gt; span.input__sub&quot;}
-  (Session info: chrome=110.0.5481.96)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='Владелец']/following-sibling::span[@class='input__sub']&quot;}
+  (Session info: chrome=110.0.5481.177)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H587CNO', ip: '172.19.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'DESKTOP-H587CNO', ip: '172.22.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.96, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\036C~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49186}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b6f34a485ee0d202f221a936ce50726e
-*** Element info: {Using=css selector, value=div:nth-child(3) &gt; span &gt; span:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\036C~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56280}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e731ac4595ca1b66877d846a0151c1f
+*** Element info: {Using=xpath, value=//span[text()='Владелец']/following-sibling::span[@class='input__sub']}
 	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@17.0.5/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -602,8 +602,8 @@ Session ID: b6f34a485ee0d202f221a936ce50726e
 	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at app//org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at app//org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at app//com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:28)
 	at app//com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:74)
@@ -616,12 +616,12 @@ Session ID: b6f34a485ee0d202f221a936ce50726e
 <a name="shouldErrorZeroCardNum()"></a>
 <h3 class="failures">Оплата по дебитовой карте с вводом 0 в поле Номер карты</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementNotFound: Element not found {fieldset &gt; div:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementNotFound: Element not found {By.xpath: //span[text()='Номер карты']/following-sibling::span[@class='input__sub']}
 Expected: text 'Неверный формат'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836687612.12.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836687612.12.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348119674.3.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348119674.3.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;fieldset &gt; div:nth-child(1) &gt; span &gt; span &gt; span.input__sub&quot;}
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='Номер карты']/following-sibling::span[@class='input__sub']&quot;}
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:37)
 	at app//com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:100)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:65)
@@ -631,8 +631,8 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messZeroNum(PaymentPage.java:54)
-	at app//ru.netology.test.DebitCardTest.shouldErrorZeroCardNum(DebitCardTest.java:192)
+	at app//ru.netology.page.DebitCardPage.messZeroNum(DebitCardPage.java:58)
+	at app//ru.netology.test.DebitCardTest.shouldErrorZeroCardNum(DebitCardTest.java:190)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -714,15 +714,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;fieldset &gt; div:nth-child(1) &gt; span &gt; span &gt; span.input__sub&quot;}
-  (Session info: chrome=110.0.5481.96)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='Номер карты']/following-sibling::span[@class='input__sub']&quot;}
+  (Session info: chrome=110.0.5481.177)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H587CNO', ip: '172.19.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'DESKTOP-H587CNO', ip: '172.22.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.96, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\036C~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49186}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b6f34a485ee0d202f221a936ce50726e
-*** Element info: {Using=css selector, value=fieldset &gt; div:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\036C~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56280}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e731ac4595ca1b66877d846a0151c1f
+*** Element info: {Using=xpath, value=//span[text()='Номер карты']/following-sibling::span[@class='input__sub']}
 	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@17.0.5/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -734,8 +734,8 @@ Session ID: b6f34a485ee0d202f221a936ce50726e
 	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at app//org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at app//org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at app//com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:28)
 	at app//com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:74)
@@ -748,12 +748,12 @@ Session ID: b6f34a485ee0d202f221a936ce50726e
 <a name="shouldErrorZeroCvc()"></a>
 <h3 class="failures">Оплата по дебитовой карте с вводом 000 в поле Cvc</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementNotFound: Element not found {div:nth-child(3) &gt; span &gt; span:nth-child(2) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementNotFound: Element not found {By.xpath: //span[text()='CVC/CVV']/following-sibling::span[@class='input__sub']}
 Expected: text 'Неверный формат'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836757129.17.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836757129.17.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348183211.8.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348183211.8.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div:nth-child(3) &gt; span &gt; span:nth-child(2) &gt; span &gt; span &gt; span.input__sub&quot;}
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='CVC/CVV']/following-sibling::span[@class='input__sub']&quot;}
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:37)
 	at app//com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:100)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:65)
@@ -763,8 +763,8 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messInvalidCvc(PaymentPage.java:71)
-	at app//ru.netology.test.DebitCardTest.shouldErrorZeroCvc(DebitCardTest.java:184)
+	at app//ru.netology.page.DebitCardPage.messInvalidCvc(DebitCardPage.java:74)
+	at app//ru.netology.test.DebitCardTest.shouldErrorZeroCvc(DebitCardTest.java:182)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -846,15 +846,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div:nth-child(3) &gt; span &gt; span:nth-child(2) &gt; span &gt; span &gt; span.input__sub&quot;}
-  (Session info: chrome=110.0.5481.96)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='CVC/CVV']/following-sibling::span[@class='input__sub']&quot;}
+  (Session info: chrome=110.0.5481.177)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H587CNO', ip: '172.19.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'DESKTOP-H587CNO', ip: '172.22.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.96, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\036C~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49186}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b6f34a485ee0d202f221a936ce50726e
-*** Element info: {Using=css selector, value=div:nth-child(3) &gt; span &gt; span:nth-child(2) &gt; span &gt; span &gt; span.input__sub}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\036C~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56280}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e731ac4595ca1b66877d846a0151c1f
+*** Element info: {Using=xpath, value=//span[text()='CVC/CVV']/following-sibling::span[@class='input__sub']}
 	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@17.0.5/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -866,8 +866,8 @@ Session ID: b6f34a485ee0d202f221a936ce50726e
 	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at app//org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at app//org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at app//com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:28)
 	at app//com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:74)
@@ -880,10 +880,10 @@ Session ID: b6f34a485ee0d202f221a936ce50726e
 <a name="shouldNotSendEmptyForm()"></a>
 <h3 class="failures">Отравка пустой формы</h3>
 <span class="code">
-<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {fieldset &gt; div:nth-child(1) &gt; span &gt; span &gt; span.input__sub}
+<pre>com.codeborne.selenide.ex.ElementShould: Element should have text 'Поле обязательно для заполнения' {By.xpath: //span[text()='Номер карты']/following-sibling::span[@class='input__sub']}
 Element: '&lt;span class=&quot;input__sub&quot;&gt;Неверный формат&lt;/span&gt;'
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836738194.15.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836738194.15.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348166725.6.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348166725.6.html
 Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
 	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
@@ -892,8 +892,8 @@ Timeout: 4 s.
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.shouldHave(Unknown Source)
-	at app//ru.netology.page.PaymentPage.messEmptyCardNumberField(PaymentPage.java:75)
-	at app//ru.netology.test.DebitCardTest.shouldNotSendEmptyForm(DebitCardTest.java:130)
+	at app//ru.netology.page.DebitCardPage.messEmptyCardNumberField(DebitCardPage.java:78)
+	at app//ru.netology.test.DebitCardTest.shouldNotSendEmptyForm(DebitCardTest.java:128)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -979,105 +979,14 @@ Timeout: 4 s.
 </span>
 </div>
 <div class="test">
-<a name="shouldPayByAppDC()"></a>
-<h3 class="failures">Оплата по одобренной дебитовой карте</h3>
-<span class="code">
-<pre>java.lang.NullPointerException: Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;conn&quot; is null
-	at ru.netology.data.SqlHelper.getPaymentEntity(SqlHelper.java:45)
-	at ru.netology.test.DebitCardTest.shouldPayByAppDC(DebitCardTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-</span>
-</div>
-<div class="test">
 <a name="shouldPayNotByDecDC()"></a>
 <h3 class="failures">Оплата по отклоненной дебитовой карте</h3>
 <span class="code">
 <pre>com.codeborne.selenide.ex.ElementShould: Element should be visible {with text: Ошибка}
 Element: '&lt;div class=&quot;notification__title&quot; displayed:false&gt;&lt;/div&gt;'
 Actual value: visible:false
-Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836652069.9.png
-Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1676836652069.9.html
+Screenshot: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348087287.0.png
+Page source: file:/C:/Users/Аленушка/IdeaProjects/DiplomaProject/build/reports/tests/1677348087287.0.html
 Timeout: 20 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
 	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
@@ -1086,8 +995,8 @@ Timeout: 20 s.
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy17.waitUntil(Unknown Source)
-	at app//ru.netology.page.PaymentPage.nokNotification(PaymentPage.java:43)
-	at app//ru.netology.test.DebitCardTest.shouldPayNotByDecDC(DebitCardTest.java:56)
+	at app//ru.netology.page.DebitCardPage.nokNotification(DebitCardPage.java:47)
+	at app//ru.netology.test.DebitCardTest.shouldPayNotByDecDC(DebitCardTest.java:54)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1187,115 +1096,115 @@ Timeout: 20 s.
 <tr>
 <td class="success">Оплата по дебитовой карте с указанием невалидных значений в поле Cvc</td>
 <td class="success">shouldErrorCvc()</td>
-<td class="success">3.250s</td>
+<td class="success">2.413s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с пустым полем Номер карты</td>
 <td class="failures">shouldErrorEmptyCardNum()</td>
-<td class="failures">7.463s</td>
+<td class="failures">7.172s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с пустым полем Cvc</td>
 <td class="failures">shouldErrorEmptyCvc()</td>
-<td class="failures">7.176s</td>
+<td class="failures">7.080s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с пустым полем Месяц</td>
 <td class="failures">shouldErrorEmptyMonth()</td>
-<td class="failures">7.448s</td>
+<td class="failures">6.715s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с пустым полем Владелец</td>
 <td class="success">shouldErrorEmptyOwner()</td>
-<td class="success">3.010s</td>
+<td class="success">2.529s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с пустым полем Год</td>
 <td class="failures">shouldErrorEmptyYear()</td>
-<td class="failures">7.225s</td>
+<td class="failures">7.043s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с указанием истекшего месяца</td>
 <td class="success">shouldErrorExpiredMonth()</td>
-<td class="success">3.145s</td>
+<td class="success">3.078s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с указанием истекшего года</td>
 <td class="success">shouldErrorExpiredYear()</td>
-<td class="success">3.202s</td>
+<td class="success">2.853s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с невалидным месяцем</td>
 <td class="success">shouldErrorInvalidMonth()</td>
-<td class="success">2.962s</td>
+<td class="success">2.362s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с указанием невалидных значений в поле Владелец</td>
 <td class="failures">shouldErrorInvalidOwner()</td>
-<td class="failures">8.140s</td>
+<td class="failures">6.959s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с неполным номером</td>
 <td class="success">shouldErrorNotFullNum()</td>
-<td class="success">3.171s</td>
+<td class="success">2.664s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с вводом 0 в поле Номер карты</td>
 <td class="failures">shouldErrorZeroCardNum()</td>
-<td class="failures">8.156s</td>
+<td class="failures">7.203s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по дебитовой карте с вводом 000 в поле Cvc</td>
 <td class="failures">shouldErrorZeroCvc()</td>
-<td class="failures">7.831s</td>
+<td class="failures">7.177s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с вводом 0 в поле Месяц</td>
 <td class="success">shouldErrorZeroMonth()</td>
-<td class="success">3.162s</td>
+<td class="success">2.373s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с вводом 0 в поле Год</td>
 <td class="success">shouldErrorZeroYear()</td>
-<td class="success">3.347s</td>
+<td class="success">2.828s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Оплата по дебитовой карте с невалидным номером</td>
 <td class="success">shouldNotPayByInvNum()</td>
-<td class="success">11.716s</td>
+<td class="success">6.276s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Отравка пустой формы</td>
 <td class="failures">shouldNotSendEmptyForm()</td>
-<td class="failures">7.417s</td>
+<td class="failures">6.402s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">Оплата по одобренной дебитовой карте</td>
-<td class="failures">shouldPayByAppDC()</td>
-<td class="failures">7.150s</td>
-<td class="failures">failed</td>
+<td class="success">Оплата по одобренной дебитовой карте</td>
+<td class="success">shouldPayByAppDC()</td>
+<td class="success">12.286s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Оплата по отклоненной дебитовой карте</td>
 <td class="failures">shouldPayNotByDecDC()</td>
-<td class="failures">24.810s</td>
+<td class="failures">34.834s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -1303,272 +1212,25 @@ Timeout: 20 s.
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>org.postgresql.util.PSQLException: FATAL: database &quot;app'&quot; does not exist
-	at org.postgresql.core.v3.ConnectionFactoryImpl.readStartupMessages(ConnectionFactoryImpl.java:469)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:112)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.&lt;init&gt;(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.&lt;init&gt;(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.&lt;init&gt;(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.&lt;init&gt;(AbstractJdbc4Connection.java:30)
-	at org.postgresql.jdbc4.Jdbc4Connection.&lt;init&gt;(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
-	at ru.netology.data.SqlHelper.getConn(SqlHelper.java:19)
-	at ru.netology.data.SqlHelper.getPaymentEntity(SqlHelper.java:44)
-	at ru.netology.test.DebitCardTest.shouldPayByAppDC(DebitCardTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-org.postgresql.util.PSQLException: FATAL: database &quot;app'&quot; does not exist
-	at org.postgresql.core.v3.ConnectionFactoryImpl.readStartupMessages(ConnectionFactoryImpl.java:469)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:112)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.&lt;init&gt;(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.&lt;init&gt;(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.&lt;init&gt;(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.&lt;init&gt;(AbstractJdbc4Connection.java:30)
-	at org.postgresql.jdbc4.Jdbc4Connection.&lt;init&gt;(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
-	at ru.netology.data.SqlHelper.getConn(SqlHelper.java:19)
-	at ru.netology.data.SqlHelper.cleanDataBase(SqlHelper.java:32)
-	at ru.netology.test.DebitCardTest.tearDownAll(DebitCardTest.java:36)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptLifecycleMethod(TimeoutExtension.java:111)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptAfterAllMethod(TimeoutExtension.java:102)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeAfterAllMethods$10(ClassBasedTestDescriptor.java:399)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeAfterAllMethods$11(ClassBasedTestDescriptor.java:397)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeAfterAllMethods(ClassBasedTestDescriptor.java:397)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.after(ClassBasedTestDescriptor.java:209)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.after(ClassBasedTestDescriptor.java:77)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:145)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:145)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-java.sql.SQLException: Null connection
-	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:512)
-	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:417)
-	at ru.netology.data.SqlHelper.cleanDataBase(SqlHelper.java:34)
-	at ru.netology.test.DebitCardTest.tearDownAll(DebitCardTest.java:36)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptLifecycleMethod(TimeoutExtension.java:111)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptAfterAllMethod(TimeoutExtension.java:102)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeAfterAllMethods$10(ClassBasedTestDescriptor.java:399)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeAfterAllMethods$11(ClassBasedTestDescriptor.java:397)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeAfterAllMethods(ClassBasedTestDescriptor.java:397)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.after(ClassBasedTestDescriptor.java:209)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.after(ClassBasedTestDescriptor.java:77)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:145)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:145)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+<pre>февр. 25, 2023 9:00:53 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
+INFO: No webdriver is bound to current thread: 1 - let's create a new webdriver
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 45564
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677348059.456][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+февр. 25, 2023 9:00:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+февр. 25, 2023 9:01:00 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
+INFO: Set browser size to 1366x768
+февр. 25, 2023 9:01:00 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+INFO: BrowserName=chrome Version=110.0.5481.177 Platform=WINDOWS
+февр. 25, 2023 9:01:00 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 5.3.1
+февр. 25, 2023 9:01:00 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+INFO: Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+февр. 25, 2023 9:01:00 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
+INFO: Create webdriver in current thread 1: ChromeDriver -&gt; ChromeDriver: chrome on WINDOWS (0e731ac4595ca1b66877d846a0151c1f)
 </pre>
 </span>
 </div>
@@ -1580,7 +1242,7 @@ java.sql.SQLException: Null connection
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.2</a> at 19 февр. 2023 г., 22:59:22</p>
+<a href="http://www.gradle.org">Gradle 7.2</a> at 25 февр. 2023 г., 21:03:04</p>
 </div>
 </div>
 </body>
