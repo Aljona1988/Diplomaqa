@@ -1,1 +1,0 @@
-java -jar artifacts/aqa-shop.jar --spring.config.location=my_application.properties
