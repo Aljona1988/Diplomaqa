@@ -2,7 +2,7 @@ package ru.netology.data;
 
 import lombok.Value;
 
-import static com.codeborne.selenide.Condition.visible;
+
 
 public class DataHelper {
     static DataGenerator dataGenerator = new DataGenerator();

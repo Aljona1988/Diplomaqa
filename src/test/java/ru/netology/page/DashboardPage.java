@@ -16,8 +16,8 @@ public class DashboardPage {
         return new DebitCardPage();
     }
 
-    public DebitCardPage payByCreditCard() {
+    public CreditCardPage payByCreditCard() {
         creditButton.click();
-        return new DebitCardPage();
+        return new CreditCardPage();
     }
 }

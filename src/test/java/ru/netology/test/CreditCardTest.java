@@ -9,7 +9,6 @@ import org.junit.jupiter.api.*;
 import ru.netology.data.DataHelper;
 import ru.netology.page.DashboardPage;
 import ru.netology.data.SqlHelper;
-
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CreditCardTest {
@@ -37,10 +36,10 @@ public class CreditCardTest {
     @Test
     @DisplayName("Оплата по одобренной кредитной карте")
     void shouldPayByAppDC() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val approvedCardInformation = DataHelper.getApprovedCardInfo();
-        paymentPage.cardInfo(approvedCardInformation);
-        paymentPage.okNotification();
+        creditCardPage.cardInfo(approvedCardInformation);
+        creditCardPage.okNotification();
         val paymentStatus = SqlHelper.getCreditEntity();
         assertEquals("APPROVED", paymentStatus);
     }
@@ -48,10 +47,10 @@ public class CreditCardTest {
     @Test
     @DisplayName("Оплата по отклоненной кредитной карте")
     void shouldPayNotByDecDC() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val declinedCardInformation = DataHelper.getDeclinedCardInfo();
-        paymentPage.cardInfo(declinedCardInformation);
-        paymentPage.nokNotification();
+        creditCardPage.cardInfo(declinedCardInformation);
+        creditCardPage.nokNotification();
         val paymentStatus = SqlHelper.getCreditEntity();
         assertEquals("DECLINED", paymentStatus);
     }
@@ -59,150 +58,150 @@ public class CreditCardTest {
     @Test
     @DisplayName("Оплата по кредитной карте с невалидным номером")
     void shouldNotPayByInvNum() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val invalidCardInformation = DataHelper.getInvalidCardInfo();
-        paymentPage.cardInfo(invalidCardInformation);
-        paymentPage.messInvalidCardNumber();
+        creditCardPage.cardInfo(invalidCardInformation);
+        creditCardPage.messInvalidCardNumber();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с неполным номером")
     void shouldErrorNotFullNum() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val notFullCardInformation = DataHelper.getNotFullCardInfo();
-        paymentPage.cardInfo(notFullCardInformation);
-        paymentPage.messErrorNum();
+        creditCardPage.cardInfo(notFullCardInformation);
+        creditCardPage.messErrorNum();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с невалидным месяцем")
     void shouldErrorInvalidMonth() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val invalidMonthCardInformation = DataHelper.getInvalidMonthCardInfo();
-        paymentPage.cardInfo(invalidMonthCardInformation);
-        paymentPage.messInvalidMonth();
+        creditCardPage.cardInfo(invalidMonthCardInformation);
+        creditCardPage.messInvalidMonth();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с указанием истекшего месяца")
     void shouldErrorExpiredMonth() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val expiredMonthCardInformation = DataHelper.getExpiredMonthCardInfo();
-        paymentPage.cardInfo(expiredMonthCardInformation);
-        paymentPage.messExpiredMonth();
+        creditCardPage.cardInfo(expiredMonthCardInformation);
+        creditCardPage.messExpiredMonth();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с указанием истекшего года")
     void shouldErrorExpiredYear() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val expiredYearCardInformation = DataHelper.getExpiredYearCardInfo();
-        paymentPage.cardInfo(expiredYearCardInformation);
-        paymentPage.messExpiredYearField();
+        creditCardPage.cardInfo(expiredYearCardInformation);
+        creditCardPage.messExpiredYearField();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с указанием невалидных значений в поле Владелец")
     void shouldErrorInvalidOwner() {
-        val paymentPage = dashboardPage.payByCreditCard();;
+        val creditCardPage = dashboardPage.payByCreditCard();;
         val invalidOwner = DataHelper.getInvalidOwnerCard();
-        paymentPage.cardInfo(invalidOwner);
-        paymentPage.messInvalidOwner();
+        creditCardPage.cardInfo(invalidOwner);
+        creditCardPage.messInvalidOwner();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с указанием невалидных значений в поле Cvc")
     void shouldErrorCvc() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val invalidCvc = DataHelper.getInvalidCvc();
-        paymentPage.cardInfo(invalidCvc);
-        paymentPage.messInvalidCvc();
+        creditCardPage.cardInfo(invalidCvc);
+        creditCardPage.messInvalidCvc();
     }
 
     @Test
     @DisplayName("Отравка пустой формы")
     void shouldNotSendEmptyForm() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val emptyForm = DataHelper.getEmptyCardInfo();
-        paymentPage.cardInfo(emptyForm);
-        paymentPage.messEmptyCardNumberField();
-        paymentPage.messEmptyMonthField();
-        paymentPage.messEmptyYearField();
-        paymentPage.messEmptyOwnerField();
-        paymentPage.messEmptyCvcField();
+        creditCardPage.cardInfo(emptyForm);
+        creditCardPage.messEmptyCardNumberField();
+        creditCardPage.messEmptyMonthField();
+        creditCardPage.messEmptyYearField();
+        creditCardPage.messEmptyOwnerField();
+        creditCardPage.messEmptyCvcField();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с пустым полем Номер карты")
     void shouldErrorEmptyCardNum() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val emptyCardNum = DataHelper.getEmptyCardNumber();
-        paymentPage.cardInfo(emptyCardNum);
-        paymentPage.messEmptyCardNumberField();
+        creditCardPage.cardInfo(emptyCardNum);
+        creditCardPage.messEmptyCardNumberField();
     }
 
     @Test
     @DisplayName("Оплата по кредитной карте с пустым полем Месяц")
     void shouldErrorEmptyMonth() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val emptyMonth = DataHelper.getEmptyMonth();
-        paymentPage.cardInfo(emptyMonth);
-        paymentPage.messEmptyMonthField();
+        creditCardPage.cardInfo(emptyMonth);
+        creditCardPage.messEmptyMonthField();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с пустым полем Год")
     void shouldErrorEmptyYear() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val emptyYear = DataHelper.getEmptyYear();
-        paymentPage.cardInfo(emptyYear);
-        paymentPage.messEmptyYearField();
+        creditCardPage.cardInfo(emptyYear);
+        creditCardPage.messEmptyYearField();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с пустым полем Владелец")
     void shouldErrorEmptyOwner() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val emptyOwner = DataHelper.getEmptyOwner();
-        paymentPage.cardInfo(emptyOwner);
-        paymentPage.messEmptyOwnerField();
+        creditCardPage.cardInfo(emptyOwner);
+        creditCardPage.messEmptyOwnerField();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с пустым полем Cvc")
     void shouldErrorEmptyCvc() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val emptyCvc = DataHelper.getEmptyCvc();
-        paymentPage.cardInfo(emptyCvc);
-        paymentPage.messEmptyCvcField();
+        creditCardPage.cardInfo(emptyCvc);
+        creditCardPage.messEmptyCvcField();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с вводом 000 в поле Cvc")
     void shouldErrorZeroCvc() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val zeroCvc = DataHelper.getZeroCvc();
-        paymentPage.cardInfo(zeroCvc);
-        paymentPage.messInvalidCvc();
+        creditCardPage.cardInfo(zeroCvc);
+        creditCardPage.messInvalidCvc();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с вводом 0 в поле Номер карты")
     void shouldErrorZeroCardNum() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val zeroCardNum = DataHelper.getCardZeroNumber();
-        paymentPage.cardInfo(zeroCardNum);
-        paymentPage.messZeroNum();
+        creditCardPage.cardInfo(zeroCardNum);
+        creditCardPage.messZeroNum();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с вводом 0 в поле Месяц")
     void shouldErrorZeroMonth() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val zeroMonth = DataHelper.getZeroMonthCardInfo();
-        paymentPage.cardInfo(zeroMonth);
-        paymentPage.messInvalidMonth();
+        creditCardPage.cardInfo(zeroMonth);
+        creditCardPage.messInvalidMonth();
     }
     @Test
     @DisplayName("Оплата по кредитной карте с вводом 0 в поле Год")
     void shouldErrorZeroYear() {
-        val paymentPage = dashboardPage.payByCreditCard();
+        val creditCardPage = dashboardPage.payByCreditCard();
         val zeroYear = DataHelper.getZeroYearCardInformation();
-        paymentPage.cardInfo(zeroYear);
-        paymentPage.messInvalidYear();
+        creditCardPage.cardInfo(zeroYear);
+        creditCardPage.messInvalidYear();
     }
 }
