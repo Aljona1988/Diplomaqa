@@ -8,8 +8,8 @@
 ## Запуск SUT:
 
 по команде через терминал IDE:
-- для БД MySQL: **start_mysql.cmd**
-- для БД Postgres: **start_postgres.cmd**
+- для БД MySQL: **java -jar artifacts/aqa-shop.jar --spring.config.location=my_application.properties**
+- для БД Postgres: **java -jar artifacts/aqa-shop.jar --spring.config.location=pg_application.properties**
  
 ## Приложение запускается на порту 8080:
  http://localhost:8080/
@@ -17,8 +17,8 @@
 ## Запуск тестов:
 
 По команде через терминал IDE:
--  для БД MySQL: **start_test_mysql.cmd**
--  для БД Postgres: **start_test_postgres.cmd**
+-  для БД MySQL: **.\gradlew clean test -D"url"='jdbc:mysql://localhost:3306/app'**
+-  для БД Postgres: **.\gradlew clean test -D"url"='jdbc:postgresql://localhost:5432/app'**
  
 ## Запуск репортинга (Allure):
 
@@ -34,6 +34,12 @@
 
 По команде в термнале IDE:
 **docker-compose down**
+
+## Документация:
+
+ - [План автоматизации](https://github.com/Aljona1988/Diplomaqa/blob/master/docs/Plan.md)
+ - [Отчет по итогам тестирования](https://github.com/Aljona1988/Diplomaqa/blob/master/docs/Report.md)
+ - [Отчет по итогам автоматизации](https://github.com/Aljona1988/Diplomaqa/blob/master/docs/Summary.md)
 
 ## Демонстрация:
 
