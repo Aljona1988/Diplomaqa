@@ -8,8 +8,8 @@
 ## Запуск SUT:
 
 по команде через терминал IDE:
-- для БД MySQL: **java -jar artifacts/aqa-shop.jar --spring.config.location=my_application.properties**
-- для БД Postgres: **java -jar artifacts/aqa-shop.jar --spring.config.location=pg_application.properties**
+- для БД MySQL: **java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar**
+- для БД Postgres: **java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar**
  
 ## Приложение запускается на порту 8080:
  http://localhost:8080/
@@ -17,8 +17,8 @@
 ## Запуск тестов:
 
 По команде через терминал IDE:
--  для БД MySQL: **.\gradlew clean test -D"url"='jdbc:mysql://localhost:3306/app'**
--  для БД Postgres: **.\gradlew clean test -D"url"='jdbc:postgresql://localhost:5432/app'**
+-  для БД MySQL: **./gradlew clean test "-Durl=jdbc:mysql://localhost:3306/app"**
+-  для БД Postgres: **./gradlew clean test "-Durl=jdbc:postgresql://localhost:5432/app"**
  
 ## Запуск репортинга (Allure):
 
